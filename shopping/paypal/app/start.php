@@ -5,7 +5,6 @@ define('SITE_URL', 'http://localhost/paypal'); //网站url自行定义  如果�
 //创建支付对象实例
 $paypal = new \PayPal\Rest\ApiContext(
     new \PayPal\Auth\OAuthTokenCredential(
-        'AXjgnHIlYc1KN3sqSYO23-p99aRMrfI4KvPePlfm92ooWpDp3tUY3GERc4yClCQKGX7gnrYTnVYB5q76',
-        'EEbXItibov1b7gEPMnuZNO26mTt-JUfZ2YGMSTHX2akjcWDkZge0NdgVhZXLLfDpZwPKQcF0rV2S-PxT'
+        '你的secret&client'
     )
 );
