@@ -1,0 +1,20 @@
+##### NOTE: Replace /shop/ with the relative web path of your catalog in the "Rewrite Base" line below:
+#Options +FollowSymLinks
+
+RewriteEngine On
+RewriteBase /
+#防盗链功能
+#RewriteCond %{HTTP_REFERER} !^http://(.+.)?mysite.com/ [NC]
+#RewriteCond %{HTTP_REFERER} !^$
+#RewriteRule .*.(jpe?g|gif|bmp|png)$ /images/nohotlink.jpg [L]
+#重定向
+#Options +FollowSymLinks
+RewriteCond %{http_host} ^yourdomain.com [NC]
+RewriteRule ^(.*)$ http://www.yourdomain.com/$1 [L,R=301]
+
+#Page_not_found
+ErrorDocument 404 /Error.html
+
+
+
+ 
